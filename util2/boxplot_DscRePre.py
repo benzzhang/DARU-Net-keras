@@ -11,12 +11,12 @@ import seaborn as sns
 import csv
 
 # .CSV用来保存数据并绘boxplot图
-f = open('data_analysis.csv','w',encoding='utf-8')
+f = open('../data_analysis.csv','w',encoding='utf-8')
 csv_writer = csv.writer(f)
 csv_writer.writerow(["Value", "Methods", "metrics"])
 
 # 从.xls文件读取数据保存到.CSV
-filepath = 'EachCaseMetric.xlsx'
+filepath = '../EachCaseMetric.xlsx'
 wb = openpyxl.load_workbook(filepath,data_only=True)
 sheet1 = wb.worksheets[0]
 ws = wb.active
